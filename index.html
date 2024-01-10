@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 검색 사이트</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 1;
+            padding: 0;
+        }
+
+        body {
+            background: url("../assets/bg.png")
+        }
+
+        header {
+            background-color: rgb(248, 217, 232);
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .movie-card {
+            margin: 40px;
+            padding: 40px;
+            width: 400px;
+            justify-self: center;
+            background-color: rgb(255, 242, 226);
+            border-radius: 13px;
+        }
+
+        .poster-image {
+            width: 100%;
+            border-radius: 13px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .movie-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+        }
+
+        .title {
+            margin-bottom: 15px;
+        }
+
+        .movies {
+            font-size: 5ch;
+        }
+
+        .search {
+            background-color: rgb(211, 235, 255);
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title1 {
+            font-size: 25px;
+        }
+
+        .searchInput {
+            font-size: 20px;
+            text-align: center;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+
+        .searchButton {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-container">
+        <header>
+            <h1 class="movies">세상의 모든 movies 🎬</h1>
+        </header>
+
+        <div class="search">
+            <input type="text" class="searchInput" id="search-input" type="text" placeholder="영화 제목 검색하기 🖱️">
+            <button type="submit" class="searchButton" id="search-button">검색</button>
+        </div>
+    </div>
+
+    <div class="movie-container" id="movies-container">
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
